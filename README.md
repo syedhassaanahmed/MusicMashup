@@ -14,7 +14,7 @@ Music Mashup API receives an MBID (MusicBrainz Identifier) and returns data cons
 ###MusicBrainz 
 * Documentation: http://musicbrainz.org/doc/Development/XML_Web_Service/Version_2 
 * URL: http://musicbrainz.org/ws/2 
-* Example: http://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fca69a8278c7da?&fmt=json&inc=url-rels+release-groups
+* Example: http://musicbrainz.org/ws/2/artist/5b11f4ce-a62d-471e-81fc-a69a8278c7da?&fmt=json&inc=url-rels+release-groups
 
 ##Wikipedia
 * Documentation: https://www.mediawiki.org/wiki/API:Main_page 
@@ -26,7 +26,7 @@ Note: In response of MusicBrainz you will find an entity named *Relations*. Wher
 ###Cover Art Archive
 * Documentation: https://wiki.musicbrainz.org/Cover_Art_Archive/API
 * URL: http://coverartarchive.org/
-* Example: http://coverartarchive.org/release-group/1b022e01-4da6387b-8658-8678046e4cef
+* Example: http://coverartarchive.org/release-group/01cf1391-141b-3c87-8650-45ade6e59070
 
 Note: In response of MusicBrainz you will find an entity named *release - groups*. It includes album's title (title) and its MBID (ID). This MBID is then used to query Cover Art Archive.
 
