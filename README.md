@@ -1,10 +1,10 @@
 #Music Mashup
 
-REST API that simply provides a mashup of some underlying APIs. APIs that will be combined are MusicBrainz, Wikipedia and Cover Art Archive. 
+REST API which simply provides a mashup of some underlying APIs. APIs which will be combined are MusicBrainz, Wikipedia and Cover Art Archive. 
 
-* MusicBrainz provides an API, including detailed information about music artists (artist name, year of birth, country of birth, etc.). 
-* Wikipedia is a community wiki that contains descriptive information, including the right music artists. 
-* Cover Art Archive is a sister project to the MusicBrainz that includes cover images to different albums, singles, eps etc. released by an artist.
+* MusicBrainz provides an API with detailed information about music artists (name, year of birth, country, etc.). 
+* Wikipedia is a community wiki which contains descriptive information about music artists. 
+* Cover Art Archive is a sister project of MusicBrainz which includes cover images of different albums, singles, eps etc. released by an artist.
 
 Music Mashup API receives an MBID (MusicBrainz Identifier) and returns data consisting of
 * Description of the artist is taken from Wikipedia. Wikipedia does not contain any MBID without mapping between MBID and Wikipedia identifiers available through MusicBrainz API.
@@ -21,14 +21,14 @@ Music Mashup API receives an MBID (MusicBrainz Identifier) and returns data cons
 * URL: https://en.wikipedia.org/w/api.php 
 * Example: https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=true&redirects=true&titles=Nirvana_(band)
 
-Note: In response of MusicBrainz you will find an entity named *Relations*. Where type is *wikipedia*, you will find the string that can be used to lookup Wikipedia API i.e *Nirvana_(band)*
+Note: In JSON response of MusicBrainz you will find an entity named *Relations*. Where type is *wikipedia*, you will find the string which can be used to lookup Wikipedia API i.e *Nirvana_(band)*
 
 ###Cover Art Archive
 * Documentation: https://wiki.musicbrainz.org/Cover_Art_Archive/API
 * URL: http://coverartarchive.org/
 * Example: http://coverartarchive.org/release-group/01cf1391-141b-3c87-8650-45ade6e59070
 
-Note: In response of MusicBrainz you will find an entity named *release - groups*. It includes album's title (title) and its MBID (ID). This MBID is then used to query Cover Art Archive.
+Note: In JSON response of MusicBrainz you will find an entity named *release - groups*. It includes album's title (title) and its MBID (ID). This MBID is then used to query Cover Art Archive.
 
 Since the underlying APIs can be quite slow, Music Mashup is designed to handle high loads through output caching, HTTP compression and Async requests where possible.
 
