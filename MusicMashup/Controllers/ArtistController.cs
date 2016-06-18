@@ -57,7 +57,7 @@ namespace MusicMashup.Controllers
             catch (Exception e)
             {
                 Debug.WriteLine($"MbId: {id}, Exception: {e}");
-                return new { Id = id, Image = string.Empty, Title = title };
+                return new {Id = id, Image = string.Empty, Title = title};
             }
         }
 
